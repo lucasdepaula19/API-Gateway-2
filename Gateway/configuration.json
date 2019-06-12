@@ -1,0 +1,77 @@
+{
+    "ReRoutes": [
+      {
+        "DownstreamPathTemplate": "/",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "10.10.1.194",
+            "Port": 4000
+          }
+        ],
+        "UpstreamPathTemplate": "/pedidos/",
+        "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
+      },
+      {
+        "DownstreamPathTemplate": "/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "10.10.1.194",
+            "Port": 4000
+          }
+        ],
+        "UpstreamPathTemplate": "/pedidos/{everything}",
+        "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
+      },
+      {
+        "DownstreamPathTemplate": "/",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "????",
+            "Port": 3000
+          }
+        ],
+        "UpstreamPathTemplate": "/carrinho/",
+        "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
+      },
+      {
+        "DownstreamPathTemplate": "/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "???",
+            "Port": 3000
+          }
+        ],
+        "UpstreamPathTemplate": "/carrinho/{everything}",
+        "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
+      },
+      {
+        "DownstreamPathTemplate": "/",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "??????",
+            "Port": 2000
+          }
+        ],
+        "UpstreamPathTemplate": "/produtos/",
+        "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
+      },
+      {
+        "DownstreamPathTemplate": "/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "???",
+            "Port": 2000
+          }
+        ],
+        "UpstreamPathTemplate": "/produtos/{everything}",
+        "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
+      }
+    ],
+    "GlobalConfiguration": { }
+  }
